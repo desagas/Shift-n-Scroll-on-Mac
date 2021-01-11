@@ -8,7 +8,7 @@ So, for now, I will be keeping my files and .git on my local, and will upload wh
 # My Unorganized Notes for Git
 *   `git rm -r --cached .` so important. If you at one point or another change your .gitignore, this corrects, and makes your repo match the new one. You follow this up with `git add .` and `git commit`.
 *   The above point will not remove commit history. If you only have very few commit histories, you can do the following to remove all histories: 
-    ```access transformers
+    ```
     cd myrepo
     rm -rf .git
     
@@ -21,25 +21,23 @@ So, for now, I will be keeping my files and .git on my local, and will upload wh
     ```
 *   You can ONLY `git push -u --force origin master` IF master is NOT the default directory, because `master is friend`. To change the default origin directory, go to gitHub -> Settings -> Branches.
 *   However, you can do it one file at a time if need be, to preserve the rest of the history of your repo ([Link to Source](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository)):
-    
+    ```
     1. Filter it out:
     
-    ```access transformers
     git filter-branch --force --index-filter
     git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA --prune-empty --tag-name-filter cat -- --all
-    ```
+    
     2. Add it to .gitignore:
-    ```    
-    echo "YOUR-FILE-WITH-SENSITIVE-DATA" >> .gitignore
+        
     git add .gitignore
     git commit -m "Add YOUR-FILE-WITH-SENSITIVE-DATA to .gitignore"
-    ```
+    
     3. Force-push to overwrite github repository:
-    ```access transformers
+    
     git push origin --force --all
-    ```
+    
     4. Verify over days or weeks that everything is perfect, be very sure, and then  dereference and garbage collect:
-    ```access transformers
+    
     git for-each-ref --format="delete %(refname)" refs/original | git update-ref --stdin
     git reflog expire --expire=now --all
     git gc --prune=now
@@ -49,4 +47,4 @@ So, for now, I will be keeping my files and .git on my local, and will upload wh
 *   `git checkout branch` to get the branch you want to work on before you start working.
 *   `git stash` to store changes to see last commit, and `git stash list / git stash apply #` to see what it is you have stashed. Add ALL files `git add` before commit with the intention of merging.
 *   `git merge branch` can only be done if ALL your current files are committed, in both directories, AND, MAKE SURE you do this from the branch you are merging into.
-*   
+*   You can rebase/merge several linear commits into the last commit you made, to make commit history upstream less noisy with `git rebase --interactive [commit-hash]` where `[commit-hash]` is the commit just before the first commit in the commits you wish to merge together.

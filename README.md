@@ -8,7 +8,7 @@ This mod is very small, and very simple. Shift n Scroll for Mac makes Shift Scro
 
 _I have tested it with ATM6, 1.3.9b, and it works fine, with 246 mods installed in 1.3.9b._
 
-### Where to Do
+### Where to Do ...:
 
 *   [Download this Mod from Curse here](https://www.curseforge.com/minecraft/mc-mods/shift-n-scroll-on-mac), or on the launcher.
 *   [The github is here](https://github.com/desagas/Shift-n-Scroll-on-Mac). No source code will be uploaded until I have played with it for a bit, and have really become comfortable with it.
@@ -21,14 +21,13 @@ _I have tested it with ATM6, 1.3.9b, and it works fine, with 246 mods installed 
 
 *   Should I make this mod work on all systems? Do you have a mouse with a side scroll wheel that you would like to use? Would you accidentally scroll with it, and not know what happened?
 
-## Can you ...:
+### Can you ...:
 *   Use it in your Pack?
-    # YES!
+    # &nbsp;&nbsp;&nbsp;&nbsp;YES!
 
 ### In need of recognition:
 
-*   [ORIGINAL Project Thumbnail free from this site](https://commons.wikimedia.org/wiki/File:Shift_logo_1.jpg) with [this License](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
-    * The same licence applies if you wish to use my edited version of it.
+*   [The original Project Thumbnail free from this site](https://commons.wikimedia.org/wiki/File:Shift_logo_1.jpg) with [this License](https://creativecommons.org/licenses/by-sa/4.0/deed.en). The same licence applies if you wish to use my edited version of it.
 
 *   SkySom, he helped me a lot, when others literally banned me for inquiring.
 *   Default Options for the how to of making the mod client-side only.
